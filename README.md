@@ -1,5 +1,5 @@
 # SYSU Beamer Template
-A LaTeX beamer template for SYSU. Modified from the RUC beamer template [https://github.com/andelf/ruc-beamer-template](https://github.com/andelf/ruc-beamer-template).
+A LaTeX beamer template for SYSU modified from the RUC beamer template [https://github.com/andelf/ruc-beamer-template](https://github.com/andelf/ruc-beamer-template).
 
 ## Screenshots
 
