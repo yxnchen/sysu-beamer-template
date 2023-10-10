@@ -6,12 +6,20 @@
 %% 中文
 \usepackage{ctex}
 
-\usepackage{newtxmath}
+%\usepackage{newtxmath}
 \RequirePackage{booktabs}
 \usepackage{multicol} 
 \usepackage{multirow}
 \usepackage[ruled,linesnumbered]{algorithm2e}
 \usepackage{color}
+
+% 数学公式
+\usepackage{amsmath,bm}
+\usepackage{lmodern}
+\usepackage{utopia} %font utopia imported
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
 
 % colors
 \definecolor{sysugreen}{RGB}{0,88,38}
@@ -73,6 +81,7 @@
 
 
 \begin{document}
+\newtheorem{assumption}{假设}
 
 % 作者信息
 \author[Author Name]{
@@ -122,6 +131,23 @@
     \item \textbf{建立研究的线索与思路}。
   \end{enumerate}
 
+\end{frame}
+
+\begin{frame}
+\frametitle{研究问题-测试数学公式}
+本课题关注以下非凸优化问题：
+\begin{equation}\label{mainpro}
+\min\limits_{\bm{x} \in\mathbb{E}}~F(\bm{x} ) := P(\bm{x}) + f(\bm{x}),
+\end{equation}
+其中 $\mathbb{E}$ 是有限维欧几里得空间，有内积运算$\langle\cdot,\cdot\rangle$和导出范数$\|\cdot\|$，函数$P$, $f$ 满足假设 \ref{assumfun}。
+\begin{assumption}\label{assumfun}
+函数 $P$， $f$ 满足如下假设：
+\begin{itemize}
+\item[{\rm (i)}] $f: \mathbb{E} \rightarrow \mathbb{R}$ 是连续可微（可能非凸）函数，并且梯度是利普希茨连续的。
+\item[{\rm (ii)}] $P: \mathbb{E} \rightarrow \mathbb{R} \cup \{+\infty\}$ 是适当闭凸函数（可能非光滑）。 
+\item[{\rm (iii)}] $F$ 是下水平有界的，即，对于任意 $\alpha \in \mathbb{R}$，下水平集合 $\big\{\bm{x} \in \mathbb{E} : F(\bm{x}) \leq \alpha\big\}$ 是有界 （可能为空）的。
+\end{itemize}
+\end{assumption}
 \end{frame}
 
 \section{研究现状}
